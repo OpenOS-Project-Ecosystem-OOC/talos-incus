@@ -26,7 +26,7 @@ ${ARCH_LIST}
 **Usage (Simplestreams - Recommended):**
 
 \`\`\`bash
-incus remote add windsor https://images.windsorcli.dev --protocol simplestreams
+incus remote add talos-incus https://images.interested-deving-1896.dev --protocol simplestreams
 incus image list windsor:
 incus launch windsor:talos/${TALOS_VERSION}/amd64 my-instance
 \`\`\`
@@ -37,13 +37,13 @@ Verify metadata and disk files:
 \`\`\`bash
 cosign verify-blob \
   --bundle talos-amd64-incus.tar.xz.bundle \
-  --certificate-identity-regexp '^https://github.com/windsorcli/talos-incus' \
+  --certificate-identity-regexp '^https://github.com/Interested-Deving-1896/talos-incus' \
   --certificate-oidc-issuer 'https://token.actions.githubusercontent.com' \
   talos-amd64-incus.tar.xz
 
 cosign verify-blob \
   --bundle talos-amd64.qcow2.bundle \
-  --certificate-identity-regexp '^https://github.com/windsorcli/talos-incus' \
+  --certificate-identity-regexp '^https://github.com/Interested-Deving-1896/talos-incus' \
   --certificate-oidc-issuer 'https://token.actions.githubusercontent.com' \
   talos-amd64.qcow2
 \`\`\`"
