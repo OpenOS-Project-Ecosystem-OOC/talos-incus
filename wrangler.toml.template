@@ -1,19 +1,19 @@
-name = "images-windsorcli"
+name = "images-interested-deving-1896"
 main = "cloudflare-worker.js"
 compatibility_date = "2024-01-01"
 
 # Route to custom domain (avoids needing workers.dev subdomain)
 routes = [
-  { pattern = "images.windsorcli.dev/*", zone_name = "windsorcli.dev" }
+  { pattern = "images.interested-deving-1896.dev/*", zone_name = "interested-deving-1896.dev" }
 ]
 
 [vars]
-# GitHub organization name (e.g., 'windsorcli', 'myorg')
+# GitHub organization name (e.g., 'Interested-Deving-1896', 'myorg')
 # Override this to use your own GitHub org when forking
-GITHUB_ORG = "windsorcli"
+GITHUB_ORG = "Interested-Deving-1896"
 
 [[kv_namespaces]]
 binding = "IMAGE_HASHES"
-# Namespace name: windsorcli-dev-images
+# Namespace name: interested-deving-1896-images
 # ID will be auto-populated by deploy workflow
 id = ""
