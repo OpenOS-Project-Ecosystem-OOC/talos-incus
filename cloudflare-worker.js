@@ -9,7 +9,7 @@
  * - /images/{product}/{version}/{arch}/{variant}/{versionKey}/{filename} - Direct image download with Incus headers
  * 
  * Configuration:
- * - GITHUB_ORG: GitHub organization name (default: 'windsorcli')
+ * - GITHUB_ORG: GitHub organization name (default: 'Interested-Deving-1896')
  * - Can be overridden via Cloudflare Worker environment variables
  * 
  * @module cloudflare-worker
@@ -17,8 +17,8 @@
 
 // Configuration - can be overridden via Cloudflare Worker environment variables
 const CONFIG = {
-  // GitHub organization name (e.g., 'windsorcli', 'myorg')
-  GITHUB_ORG: 'windsorcli',
+  // GitHub organization name (e.g., 'Interested-Deving-1896', 'myorg')
+  GITHUB_ORG: 'Interested-Deving-1896',
 };
 
 /**
