@@ -14,7 +14,7 @@ jobs:
     name: Build Talos ${{ matrix.arch }}
     runs-on: ubuntu-latest
     if: |
-      github.repository == 'windsorcli/talos-incus' && (
+      github.repository == 'Interested-Deving-1896/talos-incus' && (
         github.event_name == 'push' ||
         github.event_name == 'workflow_dispatch'
       )
@@ -114,7 +114,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     if: |
-      github.repository == 'windsorcli/talos-incus' && (
+      github.repository == 'Interested-Deving-1896/talos-incus' && (
         (github.event_name == 'push' && github.ref == 'refs/heads/main') ||
         github.event_name == 'workflow_dispatch'
       )
