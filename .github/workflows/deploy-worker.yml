@@ -34,7 +34,7 @@ jobs:
         if: steps.cf_check.outputs.skip != 'true'
         id: kv_namespace
         run: |
-          NAMESPACE_NAME="windsorcli-dev-images"
+          NAMESPACE_NAME="interested-deving-1896-images"
           
           # Use Cloudflare API directly (more reliable than wrangler in CI)
           RESPONSE=$(curl -s -X GET "https://api.cloudflare.com/client/v4/accounts/${{ secrets.CLOUDFLARE_ACCOUNT_ID }}/storage/kv/namespaces" \
