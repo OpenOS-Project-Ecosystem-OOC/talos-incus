@@ -167,7 +167,7 @@ jobs:
           ./scripts/sign-artifacts.sh "${{ steps.arches.outputs.arches }}"
 
       - name: Look up KV namespace ID by name
-        if: steps.check_release.outputs.exists == 'false'
+        if: steps.check_release.outputs.exists == 'false' && secrets.CLOUDFLARE_API_TOKEN != '' && secrets.CLOUDFLARE_ACCOUNT_ID != ''
         id: kv_namespace
         run: |
           NAMESPACE_NAME="windsorcli-dev-images"
@@ -184,7 +184,7 @@ jobs:
           echo "namespace_id=$NAMESPACE_ID" >> $GITHUB_OUTPUT
 
       - name: Upload metadata to Cloudflare KV
-        if: steps.check_release.outputs.exists == 'false'
+        if: steps.check_release.outputs.exists == 'false' && secrets.CLOUDFLARE_API_TOKEN != '' && secrets.CLOUDFLARE_ACCOUNT_ID != ''
         run: |
           ./scripts/upload-kv-metadata.sh \
             "${{ steps.kv_namespace.outputs.namespace_id }}" \
